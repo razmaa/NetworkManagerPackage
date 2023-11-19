@@ -5,6 +5,7 @@
 import Foundation
 
 public class NetworkManager {
+    static let shared = NetworkManager()
     public init() {}
 
     public func fetchData<T: Decodable>(from url: URL, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
